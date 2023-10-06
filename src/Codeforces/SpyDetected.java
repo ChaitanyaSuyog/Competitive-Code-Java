@@ -29,13 +29,21 @@ public class SpyDetected {
                         return i + 2;
                 }
             }
-            else {
+            else if (i > arr.length - 2){
                 if (arr[i] != arr[i - 1]) {
                     if (arr[i] != arr[i - 2])
                         return ++i;
+                    else
+                        return i;
                 }
-                else
-                    return i + 2;
+            }
+            else {
+                if (arr[i] != arr[i - 1]) {
+                    if (arr[i] != arr[i + 1])
+                        return ++i;
+                    else
+                        return i;
+                }
             }
         }
         return 0;
