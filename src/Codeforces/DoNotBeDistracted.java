@@ -29,8 +29,7 @@ public class DoNotBeDistracted {
         if (str.length() <= 1)
             return str;
         if (str.charAt(0) == str.charAt(1))
-            return removeDupes(
-                    str.substring(1));
+            return removeDupes(str.substring(1));
         else
             return str.charAt(0) + removeDupes(str.substring(1));
     }
