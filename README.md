@@ -5,6 +5,5 @@ This is a repository which <i>currently</i> contains my solutions for problems I
 <br>
 I have clearly mentioned the <code>problem-name</code> in the class name and also the <code>problem-number</code> as a comment.
 <br><br>
-If you couldn't solve any of these, you can #[debug] my code to understand the logic for yourself!
-
+<p>If you weren't able to solve any of these problems, you can <i><b>debug</b></i> this code to understand the logic.</p>
   
