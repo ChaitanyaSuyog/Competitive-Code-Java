@@ -10,20 +10,20 @@ public class DesignTutorial {
         int x, y;
 
         for (int i = 2; i < n; i++) {
-            if (!isPrime(i) && !isPrime(n-i)) {
+            if (isNotPrime(i) && isNotPrime(n-i)) {
                 System.out.println(i + " " + (n-i));
                 break;
             }
         }
     }
-    public static boolean isPrime(int n)
+    public static boolean isNotPrime(int n)
     {
         if (n <= 1)
-            return false;
+            return true;
         for (int i = 2; i <= n / 2; i++) {
             if (n % i == 0)
-                return false;
+                return true;
         }
-        return true;
+        return false;
     }
 }
