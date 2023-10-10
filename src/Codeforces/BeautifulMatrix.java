@@ -1,4 +1,4 @@
-//Problem 263A (first time I'm using 2D arrays, I know, superb problem honestly)
+//Problem 263A (first time I'm using 2D arrays, I know, nice problem)
 package Codeforces;
 
 import java.util.Scanner;
