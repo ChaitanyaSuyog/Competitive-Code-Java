@@ -1,3 +1,4 @@
+//Problem 1520B
 package Codeforces;
 
 import java.util.ArrayList;
@@ -7,31 +8,26 @@ public class OrdinaryNumbers {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int t = scan.nextInt();
-        ArrayList<Integer> sol = new ArrayList<>();
+        ArrayList<Long> sol = new ArrayList<>();
 
-        for (int i = 0; i < t; i++) {
-            int n = scan.nextInt();
-            int noOfOrdinary;
-            int cM;
+        for (int j = 0; j < t; j++) {
+            long n = scan.nextInt();
 
-            if (n < 10)
-                noOfOrdinary = n;
-            else if (n == 10)
-                noOfOrdinary = 9;
-            else {
-                cM = closestMultiple(n);
-                noOfOrdinary = 9 + (cM / 11);
+            long start, count = 0;
+            for (int i = 1; i <= 9; i++)
+            {
+                start = i;
+                while (start <= n)
+                {
+                    count++;
+                    start = (start * 10) +i;
+                }
             }
-            sol.add(noOfOrdinary);
+            sol.add(count);
         }
-        for (int s : sol
+        for (long s : sol
              ) {
             System.out.println(s);
         }
-    }
-    public static int closestMultiple(int n) {
-        n = n + (11 / 2);
-        n = n - (n % 11);
-        return n;
     }
 }
